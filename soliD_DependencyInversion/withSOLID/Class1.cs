@@ -14,8 +14,10 @@ namespace soliD_DependencyInversion.withSOLID
         {
             //print to console
             bookC.Print();
-            //pront to Html
-            bookH.Print();
+
+            bookC.Printer = new HtmlPrinter();
+            //print to Html
+            bookC.Print();
         }
     }
     interface IPrinter
